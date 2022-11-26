@@ -9,8 +9,8 @@ module "ec2_instance" {
   instance_type               = "t2.micro"
   key_name                    = "user1"
   monitoring                  = true
-  vpc_security_group_ids      = var.security_grou_id
-  subnet_id                   = var.subnet_id
+  vpc_security_group_ids      = ["sg-006cfedf16101985c"]
+  subnet_id                   = subnet-04a8e66c183cbc277
   associate_public_ip_address = true
   user_data                   = file("init.sh")
 
